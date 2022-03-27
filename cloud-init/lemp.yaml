@@ -1,0 +1,24 @@
+#cloud-config
+
+apt:
+  preserve_sources_list: true
+  sources:
+    php:
+      source: "ppa:ondrej/php"
+
+package_update: true
+
+packages:
+  - nginx
+  - mariadb-server
+  - php8.0-fpm
+  - php8.0
+
+runcmd:
+  - 'uname -a >> /var/www/html/index.html'
+  - 'printf "<br>" >> /var/www/html/index.html'
+  - 'nginx -v 2>> /var/www/html/index.html'
+  - 'printf "<br>" >> /var/www/html/index.html'
+  - 'mariadb -V >> /var/www/html/index.html'
+  - 'printf "<br>" >> /var/www/html/index.html'
+  - 'php -v | head -1 >> /var/www/html/index.html'
