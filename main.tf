@@ -33,5 +33,5 @@ output "public_ip" {
 }
 
 output "Instruction" {
- value ="Attendre quelques minutes que l'instance soit complétement démarrée puis se rendre sur http://${aws_instance.ubuntu_lemp.public_ip}"
+  value ="Attendre quelques minutes que l'instance soit complétement démarrée puis se rendre sur http://${aws_instance.ubuntu_lemp.public_ip}"
 }
