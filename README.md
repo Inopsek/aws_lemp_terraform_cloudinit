@@ -21,5 +21,5 @@ terraform apply
 
 ## Destroy ressources
 ```
-terraform apply -destroy -auto-approve
+terraform destroy -auto-approve
 ```
